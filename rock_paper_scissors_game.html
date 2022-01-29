@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>rock paper scissors game</title>
+</head>
+
+<body>
+ 
+
+    <script lang="text/javascript">
+alert("Hello welcome to the Game!!🤗🤗🤗")
+        function rock_paper_scissors(option, opoption) {
+            var res;
+            if ((option == 1 && opoption == 1) || (option == 2 && opoption == 2) || (option == 3 && opoption == 3)) {
+                res = 2;
+                return res;
+            } else if (option == 1 && opoption == 2) {
+                res = 1;
+                return res;
+            } else if (option == 1 && opoption == 3) {
+                res = 1;
+                return res;
+            } else if (option == 2 && opoption == 1) {
+                res = 0;
+                return res;
+            } else if (option == 2 && opoption == 3) {
+                res = 0;
+                return res;
+            } else if (option == 3 && opoption == 1) {
+                res = 0;
+                return res;
+            } else if (option == 3 && opoption == 1) {
+                res = 1;
+                return res;
+            }
+
+        }
+
+        function selected(op1,op2)
+        {
+            if(op1==1)
+            {
+                alert("you have selected rock")
+            }
+            if(op1==2)
+            {
+                alert("you have selected paper");
+
+            }
+            if(op1==3)
+            {
+                alert("you have selected scissors");
+
+            }
+            if(op2==1)
+            {
+                alert("computer have selected rock")
+            }
+            if(op2==2)
+            {
+                alert("computer have selected paper");
+
+            }
+            if(op2==3)
+            {
+                alert("computer have selected scissors");
+                
+            }
+        }
+        var stroption;
+
+        stroption = window.prompt("🛑🛑If you want to play this game enter yes else no🛑🛑:");
+        if (stroption == "yes")
+
+        {   alert("Hey thank you for playing🙏🙏 ");
+            var name, init;
+            name = window.prompt("😊😉Enter your name:");
+            alert(name + ",you are going to play with computer!");
+            var score = 0,
+                opscore=0, result;
+                alert("Tournament has started and there are three chances!!");
+            for (init=0; init < 3; init++) {
+                var option = window.prompt("😉😉Enter 1 for select rock,2 for paper and 3 for scissors:");
+                
+                
+                var opoption = Math.floor((Math.random() * 3) + 1);
+                 selected(option,opoption);
+                result = rock_paper_scissors(option, opoption);
+                if (result == 2) {
+                    alert("🎉🎉the game has tied!?\n");
+                    score++;
+                    opscore++;
+                    alert("your score " + score + "\n");
+                    alert("computer score " + opscore + "\n");
+                } else if (result == 1) {
+                    alert("🏆🏆Hurray, you have won!!🏆🏆");
+                    score++;
+                    alert("your score " + score + "\n");
+                    alert("computer score " + opscore + "\n");
+
+                } else {
+                    opscore++;
+                    alert("😢😢sorry , you have lost!!😢😢");
+                    alert("your score " + score + "\n");
+                    alert("computer score " + opscore + "\n");
+                }
+
+            }
+
+            if (score > opscore) {
+                alert("😉😉you have won the tournament!!!!😉😉")
+            } else if (opscore > score) {
+                alert("😥😥you have lost the tournamnet????");
+            } else {
+                alert("😥😥the tournament result is a tie😥😥");
+            }
+        } else {
+            alert("🙄🙄ok, you'r too busy🙄🙄");
+        }
+    </script>
+
+    <h2>Hope you have liked the game!!!</h2>
+    <form action="mailto:vikaskarkala09@gmail.com" method="post" enctype="text/plain">
+        <label>Rate the game</label><br>
+        <input type="range" name="rating">
+        <input type="submit" name="submit">
+
+    </form>
+
+<h4>To play again refresh the page.</h4>
+</body>
+
+</html>
